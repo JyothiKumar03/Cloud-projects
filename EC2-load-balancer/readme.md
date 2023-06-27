@@ -118,3 +118,47 @@ In this example, the Nginx configuration sets the number of worker processes and
 The server block specifies the server name (replace `example.com` with your actual domain) and the root directory for the website files. It also enables gzip compression for faster content delivery and defines the behavior for handling requests for static files using the location block.
 
 Remember to adjust the configuration according to your specific setup, including the server name, root directory, and any other relevant settings.
+
+## *Step-2 Connecting to EC2 console*
+1. Click on the InstanceID on the insatance which you want to connect.
+2. A new webpage with console gets opened, this is the console of our EC2 Instance
+3. On the instance page, there will be an IPAddress for accessing our webpage. But we didn't installed anything on EC2 so it won't show anything
+4. ![Screenshot (11)](https://github.com/JyothiKumar03/Cloud-projects/assets/88045362/fa84c699-47f8-49c4-a4d0-e978ad8780fd)
+5. On console, install nginx with the following commands
+6. ![Screenshot (12)](https://github.com/JyothiKumar03/Cloud-projects/assets/88045362/2ed458d0-2764-4ced-ae07-da8af760eb2b)
+7. ```linux
+   sudo yum update
+   sudo yum install nginx
+   ```
+8. Now, Nginx is installed on our instance, we can see it on our IP address which was not working before
+   ![Screenshot (13)](https://github.com/JyothiKumar03/Cloud-projects/assets/88045362/43ae0a4b-72f6-4fca-b8ef-681fc0d4393a)
+   ![Screenshot (14)](https://github.com/JyothiKumar03/Cloud-projects/assets/88045362/e929967b-d5d5-4757-9e6e-63dd6320e70c)
+9. To run nginx, use the following commands -
+10. ```linux
+    sudo systemctl start nginx
+    sudo systemctl status nginx
+    ```
+11. Now we have to setup nginx.conf file for describing the nginx server that what servers it has to balance
+12. ```linux
+    upstream backend {
+     server ec2-123-456-7890.compute-1.amazonaws.com:80;
+     server ec2-234-567-8901.compute-1.amazonaws.com:80;
+     }
+  
+     server {
+     listen 80;
+     location / {
+       proxy_pass http://backend;
+     }
+    }
+    ```
+13. ![image](https://github.com/JyothiKumar03/Cloud-projects/assets/88045362/cd99afed-0dd5-46a0-9aaf-6cb8f594eb5e)
+14. Now, to check its functionality, we can send dummy requests using
+15. curl -s https://localhost:80/ 5 to send 5 dummy requests
+
+This is the basic demonstration of Load balancer using Ngiunx server!!
+
+    
+
+
+
