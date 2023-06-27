@@ -10,10 +10,10 @@
 
 ## *Features of EC2  *
 
-+ **Scalability** - scaling application according to our requirment
-+ **Flexibility** - Choose from a wide range of instance types optimized for various use cases, including general-purpose, memory-optimized, GPU instances, and more.
-+ **High Avalibility** - AWS provides options for availability zones and regions, allowing you to distribute your instances across multiple data centers
-+ **Security** - virtual private clouds (VPCs), security groups, key pairs, and IAM (Identity and Access Management) roles, ensuring the security of your instances and data.
++  **Scalability** - scaling application according to our requirment
++  **Flexibility** - Choose from a wide range of instance types optimized for various use cases, including general-purpose, memory-optimized, GPU instances, and more.
++  **High Avalibility** - AWS provides options for availability zones and regions, allowing you to distribute your instances across multiple data centers
++  **Security** - virtual private clouds (VPCs), security groups, key pairs, and IAM (Identity and Access Management) roles, ensuring the security of your instances and data.
 + **Elastic IP** - Assign static IP addresses to your instances to make them easily accessible even if they are stopped or restarted.
 + **Amazon Machine Images (AMIs)** - Pre-configured templates that include operating systems and software configurations, allowing you to quickly launch instances with the desired setup.
 
@@ -40,13 +40,13 @@ Now, we need to establish a load-balancer for directing the request-load. Nginx 
  Its a high-performance web server and reverse proxy server. Nginx is widely used for serving static and dynamic content, as well as for load balancing, caching, and improving the overall performance of web applications.
 
 ## Features 
-***High Performance***: Nginx is designed to handle a large number of concurrent connections and deliver content quickly, making it suitable for high-traffic websites and applications.
-***Reverse Proxy***: Nginx acts as a reverse proxy server, enabling you to distribute incoming requests across multiple backend servers for load balancing and improved performance.
-***HTTP Server***: It serves as a powerful HTTP server capable of handling various HTTP/HTTPS requests, including static file serving, virtual hosting, SSL/TLS termination, and more.
-***Caching***: Nginx can cache frequently accessed content, reducing the load on backend servers and improving response times for subsequent requests.
-***Flexible Configuration***: Nginx uses a declarative configuration syntax that allows you to customize and fine-tune its behavior according to your specific requirements.
-***SSL/TLS Support***: Nginx supports SSL/TLS encryption, allowing you to secure your connections and protect sensitive data transmitted over the network.
-***Dynamic Module System***: Nginx's modular architecture allows you to extend its functionality by adding various third-party and custom modules.
++  ***High Performance***: Nginx is designed to handle a large number of concurrent connections and deliver content quickly, making it suitable for high-traffic websites and applications.
++  ***Reverse Proxy***: Nginx acts as a reverse proxy server, enabling you to distribute incoming requests across multiple backend servers for load balancing and improved performance.
++  ***HTTP Server***: It serves as a powerful HTTP server capable of handling various HTTP/HTTPS requests, including static file serving, virtual hosting, SSL/TLS termination, and more.
++  ***Caching***: Nginx can cache frequently accessed content, reducing the load on backend servers and improving response times for subsequent requests.
++  ***Flexible Configuration***: Nginx uses a declarative configuration syntax that allows you to customize and fine-tune its behavior according to your specific requirements.
++  ***SSL/TLS Support***: Nginx supports SSL/TLS encryption, allowing you to secure your connections and protect sensitive data transmitted over the network.
++  ***Dynamic Module System***: Nginx's modular architecture allows you to extend its functionality by adding various third-party and custom modules.
   
 ![image](https://github.com/JyothiKumar03/Cloud-projects/assets/88045362/d3f82f14-9947-46a0-9a1b-ec17406be545)
 
@@ -57,10 +57,10 @@ Now, we need to establish a load-balancer for directing the request-load. Nginx 
 4. Verify that Nginx is running by accessing your server's IP address or domain name in a web browser. If configured correctly, you should see the default Nginx welcome page.
 
 **Configuration** - Nginx has a configuration file which describes the load-balancing architecture. We have to create it
-***Server Blocks***: Define virtual hosts to handle different domains or subdomains. Each server block specifies the root directory, access rules, SSL/TLS settings, and more for a specific site.
-***HTTP Settings***: Configure general HTTP settings such as timeouts, buffer sizes, gzip compression, MIME types, and more.
-***Location Blocks***: Customize the behavior for specific URL patterns or directories, including proxying requests, enabling caching, or applying access restrictions.
-***Upstreams***: Define groups of backend servers for load balancing or proxying purposes.
++  ***Server Blocks***: Define virtual hosts to handle different domains or subdomains. Each server block specifies the root directory, access rules, SSL/TLS settings, and more for a specific site.
++  ***HTTP Settings***: Configure general HTTP settings such as timeouts, buffer sizes, gzip compression, MIME types, and more.
++  ***Location Blocks***: Customize the behavior for specific URL patterns or directories, including proxying requests, enabling caching, or applying access restrictions.
++  ***Upstreams***: Define groups of backend servers for load balancing or proxying purposes.
 
  ## Nginx Configuration
 
